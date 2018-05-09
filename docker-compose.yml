@@ -1,0 +1,12 @@
+version: '3'  
+services:  
+  zeronet:
+    cap_add:
+     - NET_ADMIN
+    image: zeronet:0.3.0
+    container_name: zeronet
+    ports:
+     - "43110:43110/tcp"
+    restart: always
+    volumes:
+     - ./data:/opt/zeronet
